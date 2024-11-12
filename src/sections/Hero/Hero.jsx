@@ -40,7 +40,7 @@ function Hero() {
           <br />
           CIGDEM
         </h1>
-        <h2>Developpeur Web</h2>
+        <h2>Developper Web</h2>
         <span>
           <a href="https://twitter.com/" target="_blank">
             <img src={twitterIcon} alt="Twitter icon" />
