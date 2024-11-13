@@ -1,11 +1,13 @@
-import React from "react";
+import React from 'react';
 
-function ProjectCard({ src, link, h3 }) {
+function ProjectCard({ src, link, h3, p }) {
     return (
         <a href={link}>
-            <img className="hover" src={src} alt="Booki logo" />
+            <img className="hover" src={src} alt={`${h3} logo`} />
             <h3>{h3}</h3>
-            <p>Agence de Voyage</p>
+            <p>{p}</p>
         </a>
     );
 }
+
+export default ProjectCard;
