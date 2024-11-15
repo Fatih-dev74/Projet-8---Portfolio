@@ -25,7 +25,7 @@ function Hero() {
         <img
           src={heroImg}
           className={styles.hero}
-          alt="Profile picture of Harris Johnsen"
+          alt="Photo de profil"
         />
         <img
           className={styles.colorMode}
@@ -40,7 +40,7 @@ function Hero() {
           <br />
           CIGDEM
         </h1>
-        <h2>Developper Web</h2>
+        <h2>Développeur Web</h2>
         <span>
           <a href="https://twitter.com/" target="_blank">
             <img src={twitterIcon} alt="Twitter icon" />
@@ -53,7 +53,7 @@ function Hero() {
           </a>
         </span>
         <p className={styles.description}>
-            Passionner du monde du développement Web.
+          Passionner du monde du développement Web.
         </p>
         <a href={CV} download>
           <button className="hover">Mon CV</button>
