@@ -1,0 +1,151 @@
+/* Container principal */
+.container {
+    display: flex;
+    justify-content: flex-start; /* Positionne le menu burger à gauche */
+    background-color: var(--background-color);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation */
+nav {
+    position: relative; /* Relie le menu burger et le menu */
+    width: 100%; /* Navigation occupe toute la largeur */
+}
+
+/* Bouton menu burger */
+.burgerMenu {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Animation rotation */
+    z-index: 1010; /* Toujours au-dessus du menu */
+    position: relative; /* Position relative pour alignement */
+    margin-left: 0; /* Aligné à gauche */
+}
+
+/* Animation rotation */
+.burgerMenu.open {
+    transform: rotate(180deg); /* Rotation du burger */
+}
+
+/* Menu caché */
+.menu {
+    position: absolute; /* Positionne le menu sous l'icône */
+    top: 100%; /* Aligne le menu juste sous le bouton burger */
+    left: 0; /* Alignement à gauche */
+    height: auto;
+    max-height: 300px; /* Hauteur limitée */
+    width: 100%; /* Largeur égale au conteneur */
+    background-color: rgba(0, 0, 0, 0.85); /* Fond semi-transparent */
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* Centre les textes horizontalement */
+    transform: scaleY(0); /* Cache le menu en réduisant sa hauteur */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0; /* Invisible au départ */
+    z-index: 1000;
+    border-radius: 0 0 10px 10px; /* Coins arrondis en bas */
+    overflow: hidden; /* Évite les débordements */
+}
+
+/* Menu ouvert */
+.menu.open {
+    opacity: 1;
+    transform: scaleY(1); /* Affiche le menu en agrandissant sa hauteur */
+}
+
+/* Style des liens */
+.menu li {
+    display: flex; /* S'assure que les éléments sont flexibles */
+    justify-content: center; /* Centre les textes horizontalement */
+    align-items: center; /* Centre les textes verticalement */
+}
+
+.menu li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Roboto Mono", monospace;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+/* Correction : Mode clair, texte blanc dans le menu burger */
+body[data-theme='light'] .menu li a {
+    color: #fff; /* Texte blanc en mode clair */
+}
+
+.menu li a:hover {
+    color: var(--btn-color);
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    .burgerMenu {
+        display: block; /* Affiche le burger sur mobile */
+    }
+
+    .menu {
+        max-height: 400px; /* Ajuste la hauteur pour mobile */
+        left: 50%; /* Centre le menu horizontalement */
+        transform: translateX(-50%) scaleY(0); /* Centre horizontalement le menu */
+    }
+
+    .menu.open {
+        transform: translateX(-50%) scaleY(1); /* Menu reste centré quand ouvert */
+    }
+}
+
+/* Desktop et tablette */
+@media (min-width: 800px) {
+    /* Container principal */
+    .container {
+        justify-content: center; /* Centre le menu */
+    }
+
+    /* Bouton menu burger */
+    .burgerMenu {
+        display: none; /* Cache le burger sur desktop */
+    }
+
+    /* Menu principal */
+    .menu {
+        position: static; /* Enlève la position absolue */
+        transform: none; /* Supprime l'animation */
+        visibility: visible; /* Affiche le menu par défaut */
+        opacity: 1; /* Complètement visible */
+        display: flex; /* Menu aligné horizontalement */
+        flex-direction: row; /* Aligne les liens horizontalement */
+        justify-content: center; /* Centre horizontalement */
+        align-items: center; /* Centre verticalement */
+        gap: 50px; /* Ajoute de l'espacement entre les éléments */
+        background-color: transparent; /* Supprime le fond noir */
+        width: auto; /* Ajuste automatiquement la largeur */
+        height: auto; /* Ajuste automatiquement la hauteur */
+        padding: 0; /* Enlève les marges internes */
+        border-radius: 0; /* Supprime les coins arrondis */
+        box-shadow: none; /* Supprime l'ombre */
+    }
+
+    /* Style des liens */
+    .menu li a {
+        color: var(--text-color); /* Couleur du texte */
+    }
+
+    body[data-theme='light'] .menu li a {
+        color: #000; /* Texte noir en mode clair */
+    }
+
+    .menu li a:hover {
+        color: var(--btn-color);
+    }
+}
