@@ -1,40 +1,186 @@
+/* Conteneur principal */
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
-
-  img {
-    max-width: 250px;
-    align-self: center;
-    background-color: var(--project-card-bg);
-    border-radius: 20px;
-  }
-
-  a {
-    width: fit-content;
-    text-decoration: none;
-    color: #222;
-    transition: transform 200ms ease-in-out;
-  }
-
-  a:hover {
-    transform: scale(1.05);
-  }
+  padding: 20px;
 }
 
+/* Titre centré */
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Présentation des projets */
 .projectsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colonnes adaptatives */
+  gap: 30px;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+}
+
+/* Cartes des projets */
+.projectCard {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-@media (width >= 800px) {
-  .projectsContainer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 0 30px;
+.projectCard img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.projectCard:hover img {
+  transform: scale(1.05);
+}
+
+.projectCard h3,
+.projectCard p {
+  margin: 10px 0;
+}
+
+/* Mini page (modale) */
+.projectsModal .modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.projectsModal .modal {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 85%; /* Largeur légèrement augmentée */
+  max-width: 900px; /* Largeur maximale */
+  height: 65%; /* Hauteur réduite */
+  text-align: center;
+  color: #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  position: relative;
+}
+
+[data-theme="dark"] .projectsModal .modal {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.projectsModal .modal h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.projectsModal .imagesContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.projectsModal .imagesContainer img {
+  max-width: 400px; /* Taille des images */
+  height: auto;
+  border-radius: 10px;
+}
+
+.projectsModal .modal p {
+  font-size: 16px;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+.projectsModal .modal a {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 15px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.projectsModal .modal a img {
+  width: 20px;
+  margin-right: 8px;
+}
+
+.projectsModal .closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: inherit;
+  cursor: pointer;
+}
+
+.projectsModal .closeButton:hover {
+  color: var(--link-hover-color);
+}
+
+/* Responsivité */
+@media (max-width: 600px) {
+  .projectsModal .modal {
+    padding: 15px;
+    width: 75%; /* Largeur ajustée pour mobile */
+    max-width: 400px; /* Largeur maximale légèrement augmentée */
+    height: 35%; /* Hauteur réduite pour mobile */
+    border-radius: 10px;
+  }
+
+  .projectsModal .modal h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .projectsModal .imagesContainer {
+    gap: 10px;
+    margin: 15px 0;
+  }
+
+  .projectsModal .imagesContainer img {
+    max-width: 180px; /* Images plus petites */
+    height: auto;
+  }
+
+  .projectsModal .modal p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .projectsModal .modal a {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .projectsModal .modal a img {
+    width: 16px;
+  }
+
+  .projectsModal .closeButton {
+    top: 10px;
+    right: 10px;
+    font-size: 20px; /* Taille réduite */
   }
 }
-

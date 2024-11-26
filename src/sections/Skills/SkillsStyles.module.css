@@ -2,46 +2,108 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-
-  span {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-
-  img {
-    width: 20px;
-  }
+  padding: 30px 20px;
 }
 
-.skillList {
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* Catégorie de compétences */
+.skillsCategory {
+  margin-bottom: 50px; /* Espace entre chaque catégorie */
+}
+
+.categoryTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 50px; /* Ajoute un espace entre le titre et les icônes */
+}
+
+/* Grille des compétences */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Carte de compétence */
+.skillCard {
   display: flex;
-  justify-content: space-evenly;
-  align-self: center;
-  flex-wrap: wrap;
-  row-gap: 40px;
-  max-width: 26ch;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
+.skillCard:hover {
+  transform: scale(1.1);
+}
+
+.skillIcon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px; /* Espace entre l'icône et le titre */
+  filter: var(--icon-filter);
+  transition: filter 0.3s ease;
+}
+
+[data-theme="dark"] .skillIcon {
+  filter: invert(1);
+}
+
+[data-theme="light"] .skillIcon {
+  filter: invert(0);
+}
+
+.skillTitle {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Barre de séparation */
 hr {
-  width: 100px;
-  height: 1px;
+  width: 80%;
+  height: 2px;
   border: none;
   background-color: var(--text-color);
-  margin: 30px auto;
+  margin: 40px auto;
+  transition: background-color 0.3s ease;
 }
 
-@media (width >= 800px) {
-  .skillList {
-    max-width: fit-content;
-    gap: 30px;
+[data-theme="dark"] hr {
+  background-color: #fff;
+}
 
-    p {
-      font-size: 20px;
-    }
+/* Responsivité */
+@media (max-width: 600px) {
+  .skillsGrid {
+    grid-template-columns: repeat(4, 1fr); /* Deux colonnes sur mobile */
+    gap: 20px;
+  }
+
+  .skillIcon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px; /* Réduit l’espacement entre icône et titre */
+  }
+
+  .skillTitle {
+    font-size: 0.9rem;
+  }
+
+  .categoryTitle {
+    margin-bottom: 50px; /* Réduction significative de l'espace entre le titre et les icônes */
   }
 
   hr {
-    width: 300px;
+    width: 90%;
+  }
+
+  .skillsCategory {
+    margin-bottom: 30px; /* Réduit l’espace entre les catégories sur mobile */
   }
 }
