@@ -59,6 +59,13 @@ function Hero() {
           <button className="hover">Mon CV</button>
         </a>
       </div>
+
+      {/* SCROLL DOWN MOUSE */}
+      <div className={styles.scrollDown}>
+        <a href="#projects">
+          <span></span>
+        </a>
+      </div>
     </section>
   );
 }

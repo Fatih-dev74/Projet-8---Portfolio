@@ -4,8 +4,9 @@
   justify-content: center;
   gap: 20px;
   text-align: center;
-  height: 100dvh;
+  height: 50dvh;
   min-height: 500px;
+  position: relative; /* Nécessaire pour positionner le scroll down */
 }
 
 .hero {
@@ -77,6 +78,42 @@ button:active {
   gap: 20px;
 }
 
+/* SCROLL DOWN MOUSE */
+.scrollDown {
+  position: absolute;
+  bottom: -90px; /* Position en bas de la section Hero */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 50px;
+  border: 2px solid var(--text-color); /* Style de la souris */
+  border-radius: 20px; /* Forme arrondie pour ressembler à une souris */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrollDown span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: var(--text-color); /* Couleur du point */
+  border-radius: 30%; /* Forme ronde */
+  animation: scroll 1.5s infinite ease-in-out;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0); /* Point en haut */
+  }
+  50% {
+    transform: translateY(15px); /* Point qui descend */
+  }
+  100% {
+    transform: translateY(0); /* Retour du point */
+  }
+}
+
 /* Version Desktop et Tablette */
 @media (min-width: 800px) {
   .container {
@@ -109,9 +146,20 @@ button:active {
 
 /* Version Mobile */
 @media (max-width: 600px) {
+  .container {
+    min-height: 80vh; /* Réduit encore plus pour les petits écrans */
+    gap: 10px; /* Diminue l'espacement entre les éléments */
+    margin-bottom: 10dvh;
+  }
+
+  .hero {
+    max-width: 150px; /* Réduit légèrement la taille du logo sur mobile */
+    margin-top: 15px; /* Ajoute un espacement pour éviter le chevauchement */
+  }
+  
   .colorMode {
     top: 5px; /* Ajustement pour mobile */
-    right: 5px;
+    right: 105px;
   }
 
   .description {
@@ -123,5 +171,16 @@ button:active {
     font-size: 18px;
     width: 120px;
     height: 45px;
+  }
+
+  .scrollDown {
+    width: 25px;
+    height: 40px;
+    bottom: 10px; /* Ajustement pour mobile */
+  }
+
+  .scrollDown span {
+    width: 4px;
+    height: 4px;
   }
 }
