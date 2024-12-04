@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import styles from './ProjectsStyles.module.css';
 import booki from '../../assets/booki.png';
+import mobileBooki from '../../assets/mobile-booki.png';
 import sophiebluel from '../../assets/sophiebluel.png';
+import mobilesophieBluel from '../../assets/mobile-sophieBluel.png';
 import ninacarducci from '../../assets/ninacarducci.png';
+import mobileNinaCarducci from '../../assets/mobile-ninaCarducci.png';
+import mobileKasa from '../../assets/mobile-kasa.png';
 import kasa from '../../assets/kasa.png';
 import grimoir from '../../assets/grimoir.png';
+import mobileGrimoire from '../../assets/mobile-grimoire.png';
 import ProjectCard from '../../common/ProjectCard';
 import { useTheme } from '../../common/ThemeContext'; // Import du contexte pour le mode sombre/clair
 
@@ -19,7 +24,7 @@ function Projects() {
       title: 'Booki',
       description: 'Créer la page d’accueil d’une agence de voyage en HTML5 et CSS3.',
       link: 'https://github.com/Fatih-dev74/projet2-booki',
-      images: [booki, booki], // Deux images pour la modale
+      images: [booki, mobileBooki], // Deux images pour la modale
     },
     {
       id: 'sophiebluel',
@@ -27,7 +32,7 @@ function Projects() {
       title: 'Sophie Bluel',
       description: 'Refonte du site d’une architecte d’intérieur.',
       link: 'https://github.com/Fatih-dev74/Projet3-sophie-bluel',
-      images: [sophiebluel, sophiebluel],
+      images: [sophiebluel, mobilesophieBluel],
     },
     {
       id: 'ninacarducci',
@@ -35,7 +40,7 @@ function Projects() {
       title: 'Nina Carducci',
       description: 'Création du portfolio d’une photographe professionnelle.',
       link: 'https://github.com/Fatih-dev74/Projet4-Nina-Carducci',
-      images: [ninacarducci, ninacarducci],
+      images: [ninacarducci, mobileNinaCarducci],
     },
     {
       id: 'kasa',
@@ -43,15 +48,15 @@ function Projects() {
       title: 'Kasa',
       description: 'Développement d’une plateforme de location d’appartements.',
       link: 'https://github.com/Fatih-dev74/Projet5-Kasa',
-      images: [kasa, kasa],
+      images: [kasa, mobileKasa],
     },
     {
       id: 'grimoir',
       src: grimoir,
       title: 'Mon Vieux Grimoir',
       description: 'Développement d’une application backend pour une librairie.',
-      link: 'https://github.com/Fatih-dev74/projet6',
-      images: [grimoir, grimoir],
+      link: 'https://github.com/Fatih-dev74/Projet6-MonVieuxGrimoire',
+      images: [grimoir, mobileGrimoire],
     },
   ];
 
