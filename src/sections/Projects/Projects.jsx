@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import styles from './ProjectsStyles.module.css';
-import booki from '../../assets/booki.png';
-import mobileBooki from '../../assets/mobile-booki.png';
-import sophiebluel from '../../assets/sophiebluel.png';
-import mobilesophieBluel from '../../assets/mobile-sophieBluel.png';
-import ninacarducci from '../../assets/ninacarducci.png';
-import mobileNinaCarducci from '../../assets/mobile-ninaCarducci.png';
-import mobileKasa from '../../assets/mobile-kasa.png';
-import kasa from '../../assets/kasa.png';
-import grimoir from '../../assets/grimoir.png';
-import mobileGrimoire from '../../assets/mobile-grimoire.png';
+import booki from '../../assets/booki.webp';
+import mobileBooki from '../../assets/mobile-booki.webp';
+import sophiebluel from '../../assets/sophiebluel.webp';
+import mobilesophieBluel from '../../assets/mobile-sophieBluel.webp';
+import ninacarducci from '../../assets/ninacarducci.webp';
+import mobileNinaCarducci from '../../assets/mobile-ninaCarducci.webp';
+import mobileKasa from '../../assets/mobile-kasa.webp';
+import kasa from '../../assets/kasa.webp';
+import grimoir from '../../assets/grimoir.webp';
+import mobileGrimoire from '../../assets/mobile-grimoire.webp';
 import ProjectCard from '../../common/ProjectCard';
 import { useTheme } from '../../common/ThemeContext'; // Import du contexte pour le mode sombre/clair
 
@@ -25,6 +25,7 @@ function Projects() {
       description: 'Créer la page d’accueil d’une agence de voyage en HTML5 et CSS3.',
       link: 'https://github.com/Fatih-dev74/projet2-booki',
       images: [booki, mobileBooki], // Deux images pour la modale
+      loading:"lazy",
     },
     {
       id: 'sophiebluel',
@@ -33,6 +34,7 @@ function Projects() {
       description: 'Refonte du site d’une architecte d’intérieur.',
       link: 'https://github.com/Fatih-dev74/Projet3-sophie-bluel',
       images: [sophiebluel, mobilesophieBluel],
+      loading:"lazy",
     },
     {
       id: 'ninacarducci',
@@ -41,6 +43,7 @@ function Projects() {
       description: 'Création du portfolio d’une photographe professionnelle.',
       link: 'https://github.com/Fatih-dev74/Projet4-Nina-Carducci',
       images: [ninacarducci, mobileNinaCarducci],
+      loading:"lazy",
     },
     {
       id: 'kasa',
@@ -49,6 +52,7 @@ function Projects() {
       description: 'Développement d’une plateforme de location d’appartements.',
       link: 'https://github.com/Fatih-dev74/Projet5-Kasa',
       images: [kasa, mobileKasa],
+      loading:"lazy",
     },
     {
       id: 'grimoir',
@@ -57,6 +61,7 @@ function Projects() {
       description: 'Développement d’une application backend pour une librairie.',
       link: 'https://github.com/Fatih-dev74/Projet6-MonVieuxGrimoire',
       images: [grimoir, mobileGrimoire],
+      loading:"lazy",
     },
   ];
 

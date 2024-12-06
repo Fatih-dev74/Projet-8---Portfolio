@@ -42,14 +42,17 @@ function Hero() {
         </h1>
         <h2>Développeur Web</h2>
         <span>
-          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-            <img src={twitterIcon} alt="Twitter icon" />
+          <a href="https://twitter.com/" 
+            target="_blank" rel="noopener noreferrer">
+              <img src={twitterIcon} alt="Twitter icon"  aria-label="Lien vers mon profil Twitter" />
           </a>
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-            <img src={githubIcon} alt="Github icon" />
+          <a href="https://github.com/" 
+            target="_blank" rel="noopener noreferrer">
+              <img src={githubIcon} alt="Github icon" />
           </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
-            <img src={linkedinIcon} alt="Linkedin icon" />
+          <a href="https://linkedin.com/" 
+            target="_blank" rel="noopener noreferrer">
+              <img src={linkedinIcon} alt="Linkedin icon" />
           </a>
         </span>
         <p className={styles.description}>

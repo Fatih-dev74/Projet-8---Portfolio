@@ -151,11 +151,12 @@
   }
 
   .projectsModal .modal {
-    width: 90%;
-    max-width: 350px;
+    width: 95%;
+    max-width: 300px;
     height: auto;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
+    overflow-y: auto;
   }
 
   .projectsModal .imagesContainer {
@@ -165,13 +166,13 @@
   }
 
   .projectsModal .imagesContainer img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
   }
 
   .projectsModal .modal p {
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.4;
     text-align: center;
   }
 
@@ -181,7 +182,8 @@
   }
 
   .projectsModal .modal a img {
-    width: 16px;
+    width: 14px;
+    margin-right: 5px;
   }
 
   .projectsModal .closeButton {
