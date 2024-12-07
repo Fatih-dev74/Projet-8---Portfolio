@@ -1,13 +1,23 @@
 import React, { useState } from 'react';
 import styles from './ProjectsStyles.module.css';
+// Booki
+import logoBooki from '../../assets/logoBooki.webp';
 import booki from '../../assets/booki.webp';
 import mobileBooki from '../../assets/mobile-booki.webp';
+// Sophie Bluel
+import logoSophieBluel from '../../assets/logoSophieBluel.webp';
 import sophiebluel from '../../assets/sophiebluel.webp';
 import mobilesophieBluel from '../../assets/mobile-sophieBluel.webp';
+// Nina Carducci
+import logoNinaCarducci from '../../assets/logoNinaCarducci.webp';
 import ninacarducci from '../../assets/ninacarducci.webp';
 import mobileNinaCarducci from '../../assets/mobile-ninaCarducci.webp';
+// Kasa
+import logoKasa from '../../assets/logoKasa.webp';
 import mobileKasa from '../../assets/mobile-kasa.webp';
 import kasa from '../../assets/kasa.webp';
+// Mon Vieux Grimoire
+import logoGrimoire from '../../assets/logoGrimoire.webp';
 import grimoir from '../../assets/grimoir.webp';
 import mobileGrimoire from '../../assets/mobile-grimoire.webp';
 import ProjectCard from '../../common/ProjectCard';
@@ -20,7 +30,7 @@ function Projects() {
   const projects = [
     {
       id: 'booki',
-      src: booki,
+      src: logoBooki,
       title: 'Booki',
       description: 'Créer la page d’accueil d’une agence de voyage en HTML5 et CSS3.',
       link: 'https://github.com/Fatih-dev74/projet2-booki',
@@ -29,7 +39,7 @@ function Projects() {
     },
     {
       id: 'sophiebluel',
-      src: sophiebluel,
+      src: logoSophieBluel,
       title: 'Sophie Bluel',
       description: 'Refonte du site d’une architecte d’intérieur.',
       link: 'https://github.com/Fatih-dev74/Projet3-sophie-bluel',
@@ -38,7 +48,7 @@ function Projects() {
     },
     {
       id: 'ninacarducci',
-      src: ninacarducci,
+      src: logoNinaCarducci,
       title: 'Nina Carducci',
       description: 'Création du portfolio d’une photographe professionnelle.',
       link: 'https://github.com/Fatih-dev74/Projet4-Nina-Carducci',
@@ -47,7 +57,7 @@ function Projects() {
     },
     {
       id: 'kasa',
-      src: kasa,
+      src: logoKasa,
       title: 'Kasa',
       description: 'Développement d’une plateforme de location d’appartements.',
       link: 'https://github.com/Fatih-dev74/Projet5-Kasa',
@@ -56,7 +66,7 @@ function Projects() {
     },
     {
       id: 'grimoir',
-      src: grimoir,
+      src: logoGrimoire,
       title: 'Mon Vieux Grimoir',
       description: 'Développement d’une application backend pour une librairie.',
       link: 'https://github.com/Fatih-dev74/Projet6-MonVieuxGrimoire',
