@@ -20,6 +20,7 @@ import kasa from '../../assets/kasa.webp';
 import logoGrimoire from '../../assets/logoGrimoire.webp';
 import grimoir from '../../assets/grimoir.webp';
 import mobileGrimoire from '../../assets/mobile-grimoire.webp';
+
 import ProjectCard from '../../common/ProjectCard';
 import { useTheme } from '../../common/ThemeContext'; // Import du contexte pour le mode sombre/clair
 
