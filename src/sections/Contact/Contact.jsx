@@ -21,7 +21,7 @@ function Contact() {
     setStatus("Envoi en cours...");
 
     try {
-      const response = await fetch("http://localhost:5000/send", {
+      const response = await fetch("https://projet8-portfolio.onrender.com/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
