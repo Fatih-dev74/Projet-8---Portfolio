@@ -42,15 +42,15 @@ function Hero() {
         </h1>
         <h2>Développeur Web</h2>
         <span>
-          <a href="https://twitter.com/" 
+          <a href="https://x.com/FatihDEV74" 
             target="_blank" rel="noopener noreferrer">
               <img src={twitterIcon} alt="Twitter icon"  aria-label="Lien vers mon profil Twitter" />
           </a>
-          <a href="https://github.com/" 
+          <a href="https://github.com/Fatih-dev74" 
             target="_blank" rel="noopener noreferrer">
               <img src={githubIcon} alt="Github icon" />
           </a>
-          <a href="https://linkedin.com/" 
+          <a href="www.linkedin.com/in/fatih-cigdem-263523271" 
             target="_blank" rel="noopener noreferrer">
               <img src={linkedinIcon} alt="Linkedin icon" />
           </a>
