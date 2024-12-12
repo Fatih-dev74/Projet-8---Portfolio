@@ -50,7 +50,7 @@ function Hero() {
             target="_blank" rel="noopener noreferrer">
               <img src={githubIcon} alt="Github icon" />
           </a>
-          <a href="www.linkedin.com/in/fatih-cigdem-263523271" 
+          <a href="https://www.linkedin.com/in/fatih-cigdem-263523271/" 
             target="_blank" rel="noopener noreferrer">
               <img src={linkedinIcon} alt="Linkedin icon" />
           </a>
